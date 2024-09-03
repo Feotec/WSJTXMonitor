@@ -1,0 +1,92 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".BaseActivity">
+    <!-- Is the above line the only thing that associates this menu with the my_toolbar declared in activity_main.xml?
+         No, the inflater in onCreateOptionsMenu() explicitly calls out R.menu.menu_main.  -->
+
+    <!-- This file contains only the menu items used in both the main display and Display All Messsages.  Others are
+         added in java.  They are here but commented out just to show their placement.
+         The remaining id resources are defined in res/ values/ ids.xml.
+     -->
+
+    <!--
+    <item
+        android:id="@+id/action_reply"
+        android:orderInCategory="50"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/action_set_rx"
+        android:orderInCategory="70"
+        app:showAsAction="always"/>
+    -->
+    <item
+        android:id="@+id/action_help"
+        android:icon="@drawable/baseline_help_outline_black_36"
+        android:orderInCategory="90"
+        android:title="@string/action_help"
+        app:showAsAction="ifRoom"/>
+
+    <!--
+    <item
+        android:id="@+id/action_display_all"
+        android:orderInCategory="100"
+        android:title="@string/action_display_all"
+        app:showAsAction="never"/>
+    -->
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="101"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+    <!--
+    <item
+        android:id="@+id/action_cq_only"
+        android:orderInCategory="151"
+        android:title="@string/action_cq_only"
+        android:checkable="true"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_alerts"
+        android:orderInCategory="152"
+        android:title="@string/action_alerts"
+        android:checkable="true"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_filters"
+        android:orderInCategory="153"
+        android:title="@string/action_alerts"
+        android:checkable="true"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_sorting"
+        android:orderInCategory="154"
+        android:title="@string/action_sortng"
+        android:checkable="true"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/action_mapping"
+        android:orderInCategory="155"
+        android:title="@string/action_mapping"
+        android:checkable="false"
+        app:showAsAction="never"/>
+    -->
+    <item
+        android:id="@+id/action_screen_always_on"
+        android:orderInCategory="888"
+        android:title="@string/action_screen_always_on"
+        android:checkable="true"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_about"
+        android:orderInCategory="999"
+        android:title="@string/action_about"
+        app:showAsAction="never" />
+
+</menu>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="action_display_all" type="id"/>
+    <item name="action_cq_only" type="id"/>
+    <item name="action_alerts" type="id"/>
+    <item name="action_filters" type="id"/>
+    <item name="action_sorting" type="id"/>
+    <item name="action_mapping" type="id"/>
+    <item name="action_reply" type="id"/>
+    <item name="action_set_rx" type="id"/>
+    <integer name="max_port_digits">5</integer>
+</resources>

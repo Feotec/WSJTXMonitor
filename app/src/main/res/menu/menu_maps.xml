@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MapsActivity">
+    <!-- Is the above line the only thing that associates this menu with the my_toolbar declared in activity_main.xml?
+         No, the inflater in onCreateOptionsMenu() explicitly calls out R.menu.menu_maps.  -->
+
+    <item
+        android:id="@+id/action_help"
+        android:icon="@drawable/baseline_help_outline_black_36"
+        android:title="@string/action_help"
+        app:showAsAction="ifRoom"/>
+
+</menu>

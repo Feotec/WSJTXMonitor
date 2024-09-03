@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="eula_title">End User License Agreement\n (Scroll for complete text)</string>
+    <!--
+        Some notes on this long string
+        1) Adding additional spaces after a period does nothing
+        2) Placing the \n at the end of the line will insert a space character at the beginning of the next line.
+           Placing the \n character at the beginning of the line solves that problem
+        3) Any apostrophe (such as "owner's" will terminate the string.  Have to escape the apostrophe.  Lint doesn't always catch them.
+        4) According to the web, I should be able to place this agreement into a text file in assets/ folder (?). Then
+           "Instead of using the resources you simply open the text file through getAssets() and then put the text into the field that you want." (?)
+        5) To insert spaces somewhere in the line, such as the beginning, then place the desired number of spaces between double quotes.
+    -->
+    <string name="eula_message">PLEASE READ THIS DOCUMENT CAREFULLY BEFORE USING THIS SOFTWARE.  THIS LICENSE PROVIDES IMPORTANT INFORMATION CONCERNING THIS SOFTWARE, PROVIDES YOU WITH A LICENSE TO USE THIS SOFTWARE AND CONTAINS WARRANTY AND LIABILITY INFORMATION.  BY USING THIS SOFTWARE, YOU ARE ACCEPTING THIS SOFTWARE **AS IS** AND AGREEING TO BE BOUND BY THE TERMS OF THIS LICENSE AGREEMENT.  IN NO EVENT WILL THE AUTHOR(S) BE HELD LIABLE FOR ANY DAMAGES ARISING FROM THE USE OF THIS SOFTWARE.  IF YOU DO NOT WISH ACCEPT THESE TERMS THEN UNINSTALL THIS SOFTWARE.  THIS IS YOUR RESPONSIBILITY.
+\n\n1. Terms of License
+\nThis license allows you to use this software on a single device.  If you wish to use this software on more than one device, you must license another copy of this software.
+\n\n2. Restrictions on Use
+\nYou shall not make or distribute copies of the Software or transfer the Software from one device to another.  You shall not decompile, reverse engineer, disassemble, include in other software, or translate the Software, or use the Software for any commercial purposes.  You shall not modify, alter, change or otherwise make any modification to the Software or create derivative works based upon the Software.  You shall not rent, lease, resell, sub-license, assign, distribute or otherwise transfer the Software or this license.  Any attempt to do so shall be void and of no effect.
+\n\n3. Ownership
+\nThis license provides you with limited rights to use the Software.  The author(s) retain all ownership, right, title and interest in, to and of the Software and all copies of it.  All rights not specifically granted in this license, including domestic and international copyrights, are reserved by the Owner.
+\n\n4. Proprietary Markings
+\nThe Owner\'s logos, product names, manuals, documentation, and other support materials constitute valuable trade secrets (whether or not any portion of them may be copyrighted or patented) or are otherwise proprietary to the Owner.  You shall not remove or obscure the Owner\'s copyright, trade mark or other proprietary notices from any of the materials contained in this package or downloaded together with the Software.
+\n\n5. Disclaimer of Warranties and Technical Support
+\nThe Software is provided to you after paying a license (if applicable) and on an "AS IS" basis, without any technical support or warranty of any kind including, without limitation, any warranty or condition of merchantability, fitness for a particular purpose and non-infringement.
+\n\n6. Liability during use.
+\nYou agree to always use this software in a safe manner.  You agree to hold the owner, subsidiaries, affiliates, officers, agents, representatives, employees, partners, and licensors free from any and all liability that is in any way connected with your activities.  You also promise not to sue the owner, subsidiaries, affiliates, officers, agents, representatives, employees, partners, and licensors for any claims, actions, injuries, damages, or losses associated with your activities.
+\n\nIn addition, you agree to not hold the owner, subsidiaries, affiliates, officers, agents, representatives, employees, partners, and licensors responsible for any fees or fines resulting in the use of this application.
+\n\nSOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF IMPLIED WARRANTIES, SO THE ABOVE EXCLUSION MAY NOT APPLY TO YOU. YOU MAY ALSO HAVE OTHER LEGAL RIGHTS WHICH VARY FROM JURISDICTION TO JURISDICTION.
+\n\nLink to Feotec Privacy Policy:\n"      "<a href="https://sites.google.com/view/feotec-privacy/home">Feotec Privacy Policy</a>
+\nThe Privacy Policy describes anonymous collection of usage data.  To disable anonymous collection of usage data press the OPT-OUT button below.  To re-enable press OPT-IN.
+    </string>
+    <string name="opt_out">Opt-Out</string>
+    <string name="opt_in">Opt-In</string>
+    <string name="opt_out_message">Anonymous collection of usage data is DISABLED.</string>
+    <string name="opt_in_message">Anonymous collection of usage data is ENABLED.</string>
+
+</resources>

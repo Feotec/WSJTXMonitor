@@ -1,0 +1,54 @@
+<resources>
+
+    <!-- The theme for this application is Theme.AppCompat.Light.NoActionBar.  However, I want a couple
+         modifications on it.  These are defined below.  The MainDisplay has the AppBaseTheme, where the only
+         modification is the AlertDialog buttons.  This is set in the Manifest file, at the <application> level.
+
+         Within <activity android:name=".DisplayAll"> AppTheme is specified.  The modification is the background color.
+         The default text color is defined in the layout file and changed in UDPService.processPacket() as data is written
+         to the SpannableStringBuffer displaySpanBuffer.
+
+         Later I added a mapping activity.  It's theme is Theme.AppCompat.Light.DarkActionBar (this gave a black title bar).
+         But I wanted to still display the buttons in a consistent manner.
+    -->
+
+    <!-- Theme for DisplayAll activity -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@color/displayAllBackground</item>
+        <item name="alertDialogTheme">@style/AlertDialogTheme</item>
+    </style>
+    <!-- Theme for MainActivity -->
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="alertDialogTheme">@style/AlertDialogTheme</item>
+    </style>
+    <!-- Theme for MapsActivity -->
+    <style name="AppMapTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimaryMaps</item>
+        <item name="actionBarTheme">@style/ThemeOverlay.AppTheme.ActionBar</item>
+        <item name="alertDialogTheme">@style/AlertDialogTheme</item>
+    </style>
+
+    <!-- This is copied from the web.  The values buttonBarNegativeButtonStyle and such are defined as android:buttonBarNegativeButtonStyle
+         but when I typed it in like that it was an error.
+    -->
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="buttonBarNegativeButtonStyle">@style/AllButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/AllButtonStyle</item>
+        <item name="buttonBarNeutralButtonStyle">@style/AllButtonStyle</item>
+    </style>
+
+    <style name="AllButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/button_colors</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- This was also copied from the web, https://stackoverflow.com/questions/29957822/changing-background-and-text-color-of-appcompat-light-darkactionbar-theme-on-and/29958006
+         Without a lot of understanding I copied what I needed.
+    -->
+    <style name="ThemeOverlay.AppTheme.ActionBar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- title text color -->
+        <item name="android:textColorPrimary">@color/colorTextMaps</item>
+    </style>
+
+</resources>

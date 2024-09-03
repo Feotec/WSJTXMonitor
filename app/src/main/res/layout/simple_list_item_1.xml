@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <!-- Copied from Android source -->
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/set_rx_freq_text"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:typeface="monospace"
+    android:textAppearance="?android:attr/textAppearanceListItemSmall"
+    android:gravity="center_vertical"
+    android:paddingStart="0dp"
+    android:paddingEnd="0dp"
+    android:minHeight="40dp"
+    android:singleLine="true"
+    android:scrollHorizontally="true"
+    />

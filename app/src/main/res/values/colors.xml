@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="displayAllBackground">#423B3B</color>
+    <color name="displayAllText">#AEAEAE</color>
+    <color name="displayAllTextMain">#000000</color>
+    <color name="aboutDialogTitle">#000000</color>
+    <color name="dxCallColor">#CA0000</color>
+
+    <color name="colorPrimaryMaps">#FEFEFE</color>
+    <color name="colorTextMaps">#000000</color>
+</resources>

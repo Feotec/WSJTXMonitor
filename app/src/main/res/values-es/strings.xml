@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- I'm using a string reference within a string reference and this seemed to be the best way to do it.  This block can also
+     be defined globally.  That is, it can be placed in a res/raw/entities.ent file.  But since it's only used here I did this. -->
+<!DOCTYPE resources [
+    <!ENTITY rememberShortcut "UnaVez:No">
+    <!ENTITY rememberTitle "Alerta cada estación una vez">
+    ]>
+
+<resources>
+    <!--
+    <string name="app_name">WSJT-X Monitor</string>
+    -->
+
+    <!-- New Features dialog -->
+    <string name="new_features_title">Nuevo en la versión</string>
+
+    <!-- Menu items -->
+    <string name="action_display_all">Mostrar Todos los Mensajes</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="action_cq_only">Solo CQ</string>
+    <string name="action_help">Ayuda</string>
+    <string name="action_reply">Respuesta</string>
+    <string name="action_set_rx">Ajuste de la Frecuencia de Recepción</string>
+    <string name="action_screen_always_on">Mantener la pantalla en</string>
+    <string name="action_about">Acerca</string>
+    <string name="action_alerts">Alertas</string>
+    <string name="action_filters">Filtros</string>
+    <string name="action_sorting">Ordenar</string>
+    <string name="action_mapping">Trazado de Mapas</string>
+
+    <!-- Settings submenus -->
+    <string name="dialog_settings_title">"   "Ajustes</string>
+    <string name="dialog_settings_shutdown">Apague la aplicación <b><i>Ahora</i></b></string>
+    <string name="dialog_settings_clear_screen">Borrar pantalla .....</string>
+    <string name="dialog_settings_km_miles">Mostrar la distancia en <b>Kilómetros</b> o <b>Millas</b> .....</string>
+    <string name="dialog_settings_status">Estado actual .....</string>
+    <string name="dialog_settings_port">Cambiar Número de Puerto .....</string>
+    <string name="dialog_settings_setup_WSJTX">Configurar WSJT-X o JTDX .....</string>
+    <string name="dialog_settings_help"><b><i>Apague la aplicación Ahora</i></b> - Al elegir esta opción, se cerrará inmediatamente esta aplicación.
+            \n\n<b><i>Borrar pantalla</i></b> - Borrar pantalla ahora o con WSJT-X.
+            \n\n<b><i>Mostrar la distancia en Kilómetros o Millas</i></b> - Cambia las unidades de medida de distancia.
+            \n\n<b><i>Estado actual</i></b> - Muestra la alerta actual, el filtro, la opción de clasificación (ordenar) y más.
+            \n\n<b><i>Cambiar Número de Puerto</i></b> - Cambia el número de puerto UDP. (Solo es necesario si lo cambia en WSJT-X).
+            \n\n<b><i>Configurar WSJT-X</i></b> - Instrucciones para configurar WSJT-X para enviar datos a esta aplicación.
+    </string>
+
+    <!-- Settings submenus distance in km/miles -->
+    <string name="dialog_distance_title">Seleccione:</string>
+    <string name="dialog_distance_km">Distancia en <b>Kilómetros</b></string>
+    <string name="dialog_distance_miles">Distancia en <b>Millas</b></string>
+    <string name="dialog_distance_dont1_miles">\nLa distancia se mostrará en <b>millas</b> en todas las decodificaciones futuras.</string>
+    <string name="dialog_distance_dont1_km">\nLa distancia se mostrará en <b>Kilómetros</b> en todas las decodificaciones futuras.</string>
+
+    <!-- Settings submenus clear screen -->
+    <string name="dialog_clear_screen_title">Borrar Pantalla</string>
+    <string name="dialog_clear_screen_now">"   "Borrar pantalla <b><i>Ahora</i></b></string>
+    <string name="dialog_clear_screen_WSJTX">"   "Borrar pantalla con WSJT-X .....</string>
+    <string name="dialog_clear_screen_help"><b><i>Borrar pantalla Ahora</i></b> - Elegir esta opción borrará inmediatamente la pantalla principal.
+            \n\n<b><i>Borrar pantalla con WSJT-X</i></b> - Permite borrar la pantalla principal cuando WSJT-X borra ambos paneles.
+    </string>
+
+    <!-- Settings submenus clear screen from WSJT-X -->
+    <string name="dialog_clear_screen_WSJTX_title">Borrar pantalla con WSJT-X</string>
+    <string name="dialog_clear_screen_WSJTX_message_help">Si habilita esta función, la pantalla de la aplicación se borrará cada vez que borre la pantalla WSJT-X en su computadora.
+        \n\nTenga en cuenta:
+        \n\n1) La pantalla de la aplicación se borrará cuando borre <b><i>ambos</i></b> paneles WSJT-X. En otras palabras, debe hacer doble clic en el botón \"Erase\" WSJT-X.
+        \n\n2) La pantalla de la aplicación puede tardar unos segundos en borrarse. WSJT-X no siempre envía el mensaje de borrado inmediatamente.
+        \n\nEsta selección se almacena cuando cierra la aplicación.
+    </string>
+    <string name="dialog_clear_screen_help_dont_title">Borrar Pantalla Habilitada</string>
+    <string name="dialog_clear_screen_help_dont">La pantalla de la aplicación se borrará cuando borre <b><i>ambos</i></b> paneles WSJT-X. En otras palabras, debe hacer doble clic en el botón \"Erase\" WSJT-X.
+    </string>
+    <string name="dialog_status_mycallgrid">Mi Call/Grid</string>
+    <string name="dialog_status_dxcallgrid">DX Call/Grid</string>
+    <string name="dialog_status_freamode">Frec/Modo</string>
+
+    <!-- Notification channel, used in UPDService -->
+    <string name="channel_description">Mostrar el Estado de WSJT-X</string>
+    <string name="notification_channel">WSJT-X Monitor de Canal</string>
+    <string name="notification_channel_id">WSJT-X Monitor de ID de Canal</string>
+    <string name="notification_channel_vib">WSJT-X Monitor de Canal Vibrar</string>
+    <string name="notification_channel_vib_id">WSJT-X Monitor de ID de Canal Vibrar</string>
+    <string name="notification_channel_sound">WSJT-X Monitor de Canal Sonar</string>
+    <string name="notification_channel_sound_id">WSJT-X Monitor de ID de Canal Sonar</string>
+    <string name="notification_channel_vibsound">WSJT-X Monitor de Canal Vibrar-Sonar</string>
+    <string name="notification_channel_vibsound_id">WSJT-X Monitor de ID de Canal Vibrar-Sonar</string>
+
+    <!-- Main Display Help -->
+    <string name="main_display_title">Pantalla principal</string>
+    <string name="main_display_text">Esta es la pantalla principal. Refleja el panel de actividad de la banda en WSJT-X.</string>
+    <string name="main_display_text2">\n\nLas líneas verdes</string>
+    <string name="main_display_text3">" "son mensajes CQ.</string>
+    <string name="main_display_text4">\n\nLas líneas rojas</string>
+    <string name="main_display_text5">" "contienen su callsign.</string>
+    <string name="main_display_text6">\n\nLas cursivas en negrita</string>
+    <string name="main_display_text7">" "son estaciones escuchadas por primera vez.</string>
+    <string name="main_display_text8">\n\nTexto rojo</string>
+    <string name="main_display_text8a">" "es la estación DX seleccionada.</string>
+    <string name="main_display_text9">\n\nLas líneas amarillas</string>
+    <string name="main_display_text9a">" "son Alertas (ver menú).</string>
+    <string name="main_display_text10">Seleccione estación para responder.</string>
+    <string name="main_display_text11">La pantalla se desplaza hacia arriba / abajo / izquierda / derecha. Después de desplazarse, la pantalla no se actualizará durante 10 segundos.  Un toque rápido restaurará las actualizaciones.</string>
+    <string name="display_no_conn_text">Actualmente no hay conexión con WSJT-X (o JTDX). Verifique la \"Configuración WSJT-X o JTDX\" (accesible desde el menú, opción Ajustes)
+        para establecer una conexión.\n\n
+    </string>
+
+    <!-- Display All Help -->
+    <string name="display_all_title">La Pantalla Mostrara Todos los Mensajes</string>
+    <string name="display_all_text">Esta pantalla muestra todos los datos de la pantalla principal más todos los mensajes de fondo enviados por WSJT-X o JTDX.
+        \n\nLos mensajes de fondo están en blanco opaco. Otros mensajes son verde (CQ), rojo (su callsign) o blanco brillante (todo lo demás).
+        \n\nLa pantalla se desplaza hacia arriba / abajo / izquierda / derecha. Después de desplazarse, la pantalla no se actualizará durante 10 segundos. Un toque rápido restaurará las actualizaciones.
+        \n\nLas líneas probablemente aparecen crípticas.  Por favor, consulte <a href="https://sites.google.com/view/la-pantalla-mostrara-todos/home">esta página web</a> para una descripción completa.
+    </string>           <!-- NOT REVIEWED I changed to (su callsign) from (su indicivido de callsign) -->
+
+    <!-- About and EULA Dialog -->
+    <string name="about_version">Versión</string>
+    <!--
+    <string name="about_notes">Al utilizar esta aplicación, usted acepta los términos y condiciones especificados en el Acuerdo de Licencia de Usuario Final (ALUF).
+                        \n\nComentarios a <a href="mailto:feedback@feotec.com?subject=WSJT-X Monitor Feedback">feedback@feotec.com</a>
+                        \n</string>
+    -->
+    <string name="about_view_eula">Ver ALUF</string>
+
+    <!-- DialogSetup -->
+    <string name="ip_port_title">WSJT-X Configuración</string>
+    <string name="ip_port_IP_text">Dirección IP:</string>
+    <string name="ip_port_port_text">Puerto:</string>
+    <string name="ip_port_text">Para que esta aplicación reciba datos, debe indicar a WSJT-X (o JTDX) dónde debe enviarla. Esto es fácil de hacer.
+        \n\nPara obtener instrucciones sencillas de configuración paso a paso, haga clic en el botón Ayuda a continuación.</string>
+    <string name="ip_port_text2">"  "(También hay información sobre el uso de JTAlert con esta aplicación).</string>
+    <string name="ip_port_text8">\n\nEsta ventana se cerrará automáticamente cuando los datos comiencen a fluir.</string>
+    <string name="ip_port_text9">\n\nTambién tenga en cuenta que este dispositivo debe estar en la misma red que la computadora que ejecuta WSJT-X o JTDX.</string>
+    <string name="ip_port_supplement_line1">\n Conexión WSJT-X / JTDX \n establecida</string>
+    <string name="ip_port_supplement_line2">\n\n Los resultados de la\n próxima decodificación se\n mostrarán aquí.\n\n Para ver los mensajes de\n fondo, elija Mostrar Todos\n los Msensajes del menú.</string>
+
+    <!-- Used by DialogSetupDetails class -->
+    <string name="title_text_step1">Configurar WSJT-X - Página 1 de 4</string>
+    <string name="header_text_step1"><i>Esto le dice a WSJT-X (o JTDX) que\n" "envíe datos a esta aplicación.</i>\n\nAbra WSJT-X o JTDX.\nIr al menú File\nSeleccione Settings.\n\n (La imagen se desplaza arriba/abajo,\n" "izquierda/derecha)</string>
+    <string name="title_text_step2">Configurar WSJT-X - Página 2 de 4</string>
+    <string name="header_text_step2">En la ventana de Settings hay varias\n pestañas en la parte superior.\n Seleccione la pestaña Reporting.\n\n (La imagen se desplaza arriba/abajo,\n" "izquierda/derecha)</string>
+    <string name="title_text_step3">Configurar WSJT-X - Página 3 de 4</string>
+    <string name="header_text_step3a">Establecer el UDP Server campo a</string>
+    <string name="header_text_step3b">\nEstablecer el UDP Server Port Number a</string>
+    <string name="header_text_step3c">\nLuego haz click en OK.\n\n (La imagen se desplaza arriba/abajo,\n" "izquierda/derecha)</string>
+    <string name="jtalert_text">Configurar WSJT-X - Página 4 de 4</string>
+    <string name="jtalert_header_text"><b>Notas Finales</b>
+        \n\n<b><i>Este dispositivo Android</i></b> debe estar en la misma red que la computadora que ejecuta WSJT-X o JTDX.  (Probablemente lo sea).
+        \n\n<b><i>JTAlert, GridTracker y muchos</i></b> programas similares se pueden usar con esta aplicación usando su función de reenvío incorporada.
+        <a href="https://sites.google.com/view/uso-con-otros-programas/home">Esta página web</a> tiene detalles.</string>
+
+    <!-- The next two lines are used in dialog_setup_details.xml just to avoid a warning SO THEY ARE UNTRANSLATED.  -->
+    <string name="dialog_details_content_desc">header followed by image by footer</string>
+    <string name="dialog_details_content_desc2">the image after header and followed by footer</string>
+
+    <!-- No WiFi Dialog -->
+    <string name="no_wifi_title">WiFi no Conectado</string>
+    <string name="no_wifi_text">Esta aplicación es solo WiFi.
+        \n\nPor favor, conecte este dispositivo a su casa WiFi. La computadora que ejecuta WSJT-X o JTDX debe estar en la misma red doméstica.
+        \n\nPara más detalles visite <a href="https://sites.google.com/view/wifinoconectada/home">esta página web</a>.
+        \n\nSi cree que el WiFi está conectado, verifique (a través de Configuración) que su teléfono tenga una dirección IP.  Algunos teléfonos se deslizan dentro y fuera de WiFi.
+        Para asistencia por correo electrónico <a href="mailto:feedback@feotec.com?subject=WSJT-X Monitor Feedback">feedback@feotec.com</a>.
+        \n\nPor favor reinicie esta aplicación después de conectarse a WiFi.
+    </string>
+
+    <!-- Port Input Menu, DialogPort.java -->
+    <string name="port_message_title">Número de Puerto de Entrada</string>
+    <string name="port_message_text">Los valores del puerto pueden oscilar entre 1024 y 32767.\n\nDebe coincidir con el puerto especificado en WSJT-X (o JTDX).   Haga clic en Ayuda para más detalles.</string>
+    <string name="port_message_error_title">Error de Entrada del Número de Puerto</string>
+    <string name="port_message_error_text">Los valores de puerto deben estar entre 1024 y 32767 inclusive.</string>
+    <string name="port_message_success_title">Número de Puerto Cambiado</string>
+    <string name="port_message_success_text">Esta aplicación debe reiniciarse para que el cambio surta efecto.</string>
+    <string name="port_message_help_text">El número de puerto es simplemente un número que identifica esta aplicación.
+        \n\nPuede elegir cualquier número entre 1024 y 32767. Sin embargo, a WSJT-X (o JTDX) se le debe informar cuál es este número de puerto. Esto se hace en la pestaña Informes de la ventana Configuración.
+        (Las instrucciones detalladas sobre cómo configurar WSJT-X se encuentran en la opción \"Configurar WSJT-X o JTDX\" de este menú de Ajustes).
+        \n\nEl punto importante es que <b><i>el número en la configuración de WSJT-X (o JTDX) debe coincidir con el número en esta aplicación</i></b>. El valor predeterminado para ambos es 2237.
+        Por lo tanto, si no los ha cambiado, ya deben coincidir.
+    </string>
+
+    <!-- Miscellaneous -->
+    <string name="notification_string">WSJT-X Monitor - paquetes totales: %d</string>
+    <string name="enable">Habilitar</string>
+    <string name="disable">Inhabilitar</string>
+    <string name="finish">Terminar</string>
+    <string name="done">Hecho</string>
+    <string name="lf">\n</string>
+    <string name="lflf">\n\n</string>
+    <string name="help">Ayuda</string>
+    <string name="unknown">Desconocido</string>
+    <string name="dismiss">Cerrar</string>          <!-- replaced Dismiss with Close -->
+    <string name="detail_help">Ayuda</string>       <!-- replaced Details with Help -->
+    <string name="cancel">Cancelar</string>
+    <string name="back">Espalda</string>
+    <string name="next">Siguiente</string>
+    <string name="okay">OK</string>
+    <string name="setup">Configurar</string>
+    <string name="more">mas</string>
+    <string name="waiting">\n\n"   Esperando ...."
+                           \n\n"   Sin conexión a WSJT-X"
+                           \n\n"   Si esto continúa por más
+                             \n"   de 30 segundos, haga lo"
+                             \n"   siguiente:"
+                           \n\n"   1) Abre el menu (tres puntos en"
+                             \n"      la esquina superior derecha)"
+                             \n"   2) Presione la primera opción,"
+                             \n"      Configurar WSJT-X o JTDX"
+                             \n"   3) Siga las instrucciones en"
+                             \n"      la ventana que aparece."
+    </string>
+    <string name="waiting_short">\n\n"   Esperando ...."</string>
+    <string name="clearall">Borrar-Vuelve</string>
+
+    <!-- DialogFilterAlerts (most are defined in string_array_init.xml -->
+    <string name="select_all"><b><i>Seleccionar todos</i></b></string>
+    <string name="unselect_all"><b><i>Deseleccionar todos</i></b></string>
+
+    <!-- FilterAlertsInterface -->
+    <string name="filter_toast">Filtrar</string>
+    <string name="filter_toast_off">Los filtros ahora están apagados</string>
+    <string name="filter_description_include">Incluir</string>
+    <string name="filter_description_exclude">Excluir</string>
+    <string name="filter_edit_error">Error al leer el filtro</string>
+
+    <string name="title_include_exclude">Seleccione el Tipo de Filtro\n"    "(elige uno)</string>
+    <string name="help_include_exclude">Los filtros le permitirán especificar los continentes, países y callsigns de llamada que desea mostrar o no..
+        \n\n<b>Incluir Filtros</b> mostrará solo los países/continentes/callsigns que especifique
+        \n\n<b>Excluir Filtros</b> mostrará todo <u><i>excepto</i></u> los países/continentes/callsigns que especifique.
+        \n\n<b>Reutilizar Filtros Anteriores</b>: para ahorrar tiempo, puede elegir entre los diez filtros más recientes.
+        \n\n<b>Editar Filtros Anteriores</b>: recupere y realice cambios en uno de sus diez filtros más recientes.
+        \n\nPara más detalles visite <a href="https://sites.google.com/view/incluiryexcluirfiltros/home">esta página web</a>.</string>
+    <string name="title_region_prefix">Elija lo que quire filtrar\n"    "(seleccione uno o más)</string>
+    <string name="help_region_prefix">Aquí usted define su filtro Incluir o Excluir.
+        \n\n<b><i>Lista de Continentes o Países</i></b> - Elegirás de una lista de continentes o países. Se permiten selecciones múltiples.
+        \n\n<b><i>Prefijo o Callsign</i></b> - Escribirá el prefijo que desea incluir o excluir. Por ejemplo, si escribe un prefijo de tres caracteres,
+        como VK9, luego se comparará con los tres primeros caracteres de cada estación emisora. Si lo desea, puede teclear los indicativos completos.
+        \n\nPara más detalles visite <a href="https://sites.google.com/view/filtrarporreginoporprefijo/home">esta página web</a>.</string>
+    <string name="title_previous_filters">Filtros Anteriores\n"    "(elige uno)</string>
+    <string name="help_previous_filters">Esta ventana muestra descripciones de sus filtros anteriores (hasta diez). Si usa el mismo filtro con frecuencia entonces
+        puede ahorrar tiempo seleccionándolo de la lista.
+        \n\nLa lista puede desplazarse hacia arriba y hacia abajo si es necesario.
+        \n\nEl filtro utilizado más recientemente es siempre el primero de la lista.</string>
+
+    <string name="title_continent">Seleccione Continente\n"    "(seleccione uno o más)</string>
+    <string name="help_continent">Esta ventana le permite filtrar en uno o más de los seis continentes.
+        \n\nPara cada mensaje recibido, el continente se determina a partir del indicativo de la estación emisora, utilizando la Lista de países ARRL.
+        \n\nPulse el botón OK cuando haya terminado.
+        \n\nPresione BORRAR-VUELVE para borrar todas las entradas y volver al menú anterior.</string>
+    <string name="title_countries">Seleccionar Paises\n"    "(seleccione uno o más)</string>
+    <string name="help_major_countries">Esta ventana enumera 30 países principales y le permite filtrar en uno o más. La pantalla se desplaza hacia arriba y hacia abajo.
+        \n\nPara cada mensaje recibido, el país se determina a partir del indicativo de la estación emisora, en función de la lista de países ARRL.
+        \n\nPulse el botón OK cuando haya terminado.
+        \n\nPulse BORRAR-VUELVE para eliminar todas las entradas y volver al menú anterior.</string>
+    <string name="help_all_countries">Esta ventana enumera todos los países en la Lista de países de ARRL y le permite filtrar en uno o más. La pantalla se desplaza hacia arriba y hacia abajo.
+        \n\nPara cada mensaje recibido, el país se determina a partir del indicativo de la estación emisora, en función de la lista de países ARRL.
+        \n\nPulse el botón OK cuando haya terminado.
+        \n\nPulse BORRAR-VUELVE para eliminar todas las entradas y volver al menú anterior.</string>
+
+    <!-- FilterAlertsInterface DialogPrefixCallsign -->
+    <string name="title_prefix_callsign">Ingrese el Prefijo o Callsign</string>
+    <string name="text_prefix_callsign">Introduzca tantos prefijos como desee.\nPresione la tecla <b>Realiz/Enter</b> (<i>en el teclado</i>) después de cada entrada.</string>
+    <string name="text2_prefix_callsign">Introduzca tantos prefijos como desee.\nPresione la tecla <b>Realiz/Enter</b> (<i>en el teclado</i>) después de cada entrada.\n<b>Desmarque</b> para eliminar el prefijo.</string>
+    <string name="help_prefix_callsign">Esto le permite filtrar por callsigns específicos o el prefijo de esos indicativos.
+        \n\nEl callsign de la estación emisora ​​se extrae de cada mensaje. Los primeros caracteres de ese callsign se comparan con lo que escribe aquí.
+        \n\nUsted puede ingresar múltiples prefijos. Presione la tecla REALIZ o ENTER en el teclado después de cada uno.
+        \n\nDespués de ingresar un prefijo, aparecerá en esta ventana. Puede eliminar ese prefijo desactivando la casilla de verificación junto a él.
+        \n\nPulse OK cuando haya terminado. Presione BORRAR-VUELVE para borrar todas las entradas. Ambos botones te regresarán al menú anterior.
+        \n\nPara más detalles y ejemplos ver <a href="https://sites.google.com/view/entrada-de-prefijo-o-callsign/home">esta página web</a>.</string>
+
+    <!--  AlertsInterface -->
+    <string name="alert_toast">Alerta</string>
+    <string name="alerts_toast_off">Las alertas ahora están apagadas</string>
+    <string name="title_notification">WSJT-X Monitor Alertas</string>
+    <string name="title_alert_new_reuse">Nueva alerta?\n"    "(elige uno)</string>
+    <string name="title_alerts_region_prefix">Alerta Sobre Qué?\n"    "(seleccione uno o más)</string>
+    <string name="title_previous_alerts">Alertas Anteriores\n"    "(elige uno)</string>
+    <string name="alert_edit_error">Error al leer la alerta</string>
+
+    <string name="alert_description_alert_on_my_call">Mi Indicativo</string>
+    <string name="alert_description_alert_on_all">Todas las estaciones</string>
+    <string name="alert_description_sound">Sonar</string>
+    <string name="alert_description_vibrate">Vibrar</string>
+    <string name="alert_description_silent">Silencio</string>
+    <string name="alert_description_remember_no">&rememberShortcut;</string>
+
+    <!-- AlertsInterface, Options dialog. -->
+    <string name="alert_settings_currently">Actualmente</string>
+    <string name="alert_settings_on">SÍ</string>
+    <string name="alert_settings_off">NO</string>
+
+    <string name="alert_settings_sound_vibrate_prefix">Sonido y/o Vibración</string>
+    <string name="alert_settings_sound_vibrate">Sonar-Vibrar</string>
+    <string name="alert_settings_sound_only">Solo sonido</string>
+    <string name="alert_settings_vibrate_only">Sólo vibrar</string>
+    <string name="alert_settings_silent">Silencio</string>
+
+    <string name="alert_settings_stations_prefix">&rememberTitle;</string>
+    <string name="alert_settings_min_signal_prefix">Nivel mínimo de señal</string>
+    <string name="alert_settings_min_signal_none">Sin mínimo</string>
+
+    <string name="alert_settings_test_sound"><b>Prueba de sonido y vibración</b>
+        \n¿Sin sonido? <a href="https://sites.google.com/view/callsignorprefixentry/home">Tocar aquí</a>.</string>
+
+    <string name="alert_settings_change">Cambio</string>
+    <string name="alert_settings_test">Prueba</string>
+    <string name="title_alert_settings">Opciones de Alerta</string>
+
+    <string name="min_signal_text">Si por debajo de este nivel <u><i>NO</i></u> se producirá una alarma.
+            \nDesliza hacia arriba para cambiar.</string>
+    <string name="min_signal_no_min">Sin mínimo</string>
+    <string name="title_min_signal">Establecer Nivel Mínimo de Señal</string>
+
+    <string name="notification_more">(..mas)</string>
+
+    <string name="touchable_text_description">Prueba de sonido de alerta y vibración</string>
+
+    <string name="help_new_reuse">Las alertas permiten que la aplicación monitoree la actividad aérea por usted.
+        <a href="https://sites.google.com/view/alertasinformaciongeneral/home">Tocar aquí</a> para obtener una descripción general.
+        \n\n<i><b><u>Nota:</u></b> las alertas pueden no funcionar si la pantalla está apagada (un error de Android)</i>
+        \n\n<b>Nueva Alerta</b> lo llevará a los menús donde puede crear una nueva alerta..
+        \n\n<b>Reutilizar Alerta Anterior</b>: Para ahorrar tiempo, puede recuperar una de sus diez alertas más recientes.
+        \n\n<b>Editar Filtros Anteriores</b>: recupere y realice cambios en uno de sus diez alertas más recientes.
+    </string>
+
+    <string name="help_previous_alerts">Esta ventana muestra descripciones de sus alertas anteriores (hasta diez).
+        Si usa la misma alerta con frecuencia, puede ahorrar tiempo seleccionándola de la lista.
+        \n\nSi ve \"&rememberShortcut;\", significa que \"&rememberTitle;\" está desactivado.
+        \n\nLa alerta más reciente siempre es la primera en la lista.</string>
+
+    <string name="help_region_prefix_alert">Las alertas permiten que la aplicación monitoree la actividad aérea por usted.
+        <a href="https://sites.google.com/view/alertasinformaciongeneral/home">Tocar aquí</a> para obtener una descripción general.
+        \n\n<i><b><u>Nota:</u></b> las alertas pueden no funcionar si la pantalla está apagada (un error de Android)</i>
+        \n\n<b><i>Mi Indicativo</i></b> - Con esta opción, recibirás una alerta cuando alguien te llame..
+        \n\n<b><i>Todas las estaciones</i></b> - Seleccione esta opción y recibirá una alerta en cada estación. Esto se puede usar, por ejemplo, para ver si 6 metros
+        están abiertos. Si se selecciona, todas las demás opciones se deseleccionan.
+        \n\n<b><i>Lista de Continentes o Países</i></b> - Elegirás de una lista de continentes o países. Se permiten selecciones múltiples.  Se producirá
+        una alerta cuando se escucha una de estas regiones.
+        \n\n<b><i>Prefijo o Callsign</i></b> - Escribirás el prefijo o indicativo (callsign) para generar una alerta.  Por ejemplo, si escribe un prefijo de tres caracteres,
+        como VK9, luego se comparará con los tres primeros caracteres de cada estación emisora. Si lo desea, puede teclear los indicativos completos.
+        \n\nPara más detalles visite <a href="https://sites.google.com/view/alertabasadaenregionoprefijo/home">esta página web</a>.</string>
+
+    <string name="help_prefix_callsign_alert">Esto le permite alertar sobre indicativos específicos o el prefijo de dichos indicativos (callsign).
+        \n\nEl indicativo de la estación emisora ​​se extrae de cada mensaje. Los primeros caracteres de ese indicativo se comparan con lo que escribe aquí.
+        \n\nUsted puede ingresar múltiples prefijos. Presione la tecla REALIZ o ENTER en el teclado después de cada uno.
+        \n\nDespués de ingresar un prefijo, aparecerá en esta ventana. Puede eliminar ese prefijo desactivando la casilla de verificación junto a él.
+        \n\nPulse OK cuando haya terminado. Presione BORRAR-VUELVE para borrar todas las entradas. Ambos botones te regresarán al menú anterior.
+        \n\nPara más detalles y ejemplos ver <a href="https://sites.google.com/view/alertaencallsignoentradadepref/home">esta página web</a>.</string>
+
+    <string name="help_continent_alert">Esta ventana le permite alertar en uno o más de los seis continentes.
+        \n\nPara cada mensaje recibido, el continente se determina a partir del indicativo de la estación emisora, utilizando la Lista de países ARRL.
+        \n\nPulse el botón OK cuando haya terminado.
+        \n\nPresione BORRAR-VUELVE para borrar todas las entradas y volver al menú anterior.</string>
+    <string name="help_major_countries_alert">Esta ventana enumera 30 países principales y le permite alertar sobre uno o más. La pantalla se desplaza hacia arriba y hacia abajo.
+        \n\nPara cada mensaje recibido, el país se determina a partir del indicativo de la estación emisora, en función de la lista de países ARRL.
+        \n\nPulse el botón OK cuando haya terminado.
+        \n\nPulse BORRAR-VUELVE para eliminar todas las entradas y volver al menú anterior.</string>
+    <string name="help_all_countries_alert">Esta ventana enumera todos los países en la Lista de países de ARRL y le permite alertar sobre uno o más.  La pantalla se desplaza hacia arriba y hacia abajo.
+        \n\nPara cada mensaje recibido, el país se determina a partir del indicativo de la estación emisora, en función de la lista de países ARRL.
+        \n\nPulse el botón OK cuando haya terminado.
+        \n\nPulse BORRAR-VUELVE para eliminar todas las entradas y volver al menú anterior.</string>
+
+    <string name="help_alert_settings">Aquí personalizas tu alerta. Para más información ver esta <a href="https://sites.google.com/view/opcionesdealerta/home">página web</a>.
+        \n\n<b><i>Sonido y/o Vibración</i></b> - Presione el botón CAMBIAR para recorrer las opciones de sonido y vibración disponibles.
+        \n\n<b><i>Nivel mínimo de señal</i></b> - Presione CAMBIAR y aparecerá otra ventana. Una estación debe estar por encima de este nivel de señal antes de que ocurra una alerta.
+        \n\n<b><i>&rememberTitle;</i></b> - Una vez que una estación genera una alerta, no generará una alerta nuevamente.
+        \n\n<b><i>Prueba de sonido y vibración</i></b> - Presione el botón PRUEBA y la aplicación intentará emitir un pitido y vibrar.
+        \n\nPresione el botón TERMINAR cuando haya terminado. Presione CANCELAR para salir.</string>
+
+    <string name="help_min_signal">Esta ventana muestra una rueda que le permite seleccionar el nivel mínimo de señal.
+        \n\nDeslice hacia arriba donde dice "Sin mínimo" para cambiar la configuración.
+        \n\nUna estación no generará una alerta a menos que esté por encima de este nivel de señal.
+        \n\nPresione el botón OK cuando haya terminado.
+        \n\nPresione BORRAR-VUELVE para restaurar la configuración anterior y volver al menú anterior.</string>
+
+    <string name="help_no_sound_above_api_26">Posibles razones para que no haya sonido:
+        \n\n1) Si el tono de llamada está silenciado, generalmente también silencia las notificaciones.
+        \n\n2) El modo \"No Molestar\" está activado.
+        \n\n3) El sonido de notificación se rechaza. El volumen de control de notificaciones a menudo está separado del timbre o volumen de medios.
+        \n\n4) En la configuración de Android, las notificaciones de esta aplicación se han silenciado.
+        \n\nEn cuanto a la vibración, algunos dispositivos no tienen un vibrador. Si el suyo no lo hace, esta aplicación solo le dará la opción de sonido o silencio.
+        \n\nLas versiones recientes de Android han dado a los usuarios más control sobre los sonidos de notificación. Para una discusión más exhaustiva, consulte
+        esta <a href="https://sites.google.com/view/sonidoyvibracin-after-api26/home">página web</a>.
+    </string>
+
+    <string name="help_no_sound_below_api_26">Posibles razones para que no haya sonido:
+        \n\n1) Si el tono de llamada está silenciado, generalmente también silencia las notificaciones.
+        \n\n2) El modo \"No Molestar\" está activado.
+        \n\n3) El sonido de notificación se rechaza. El volumen de control de notificaciones a menudo está separado del timbre o volumen de medios.
+        \n\n4) En la configuración de Android, las notificaciones de esta aplicación se han silenciado.
+        \n\nEn cuanto a la vibración, algunos dispositivos no tienen un vibrador. Si el suyo no lo hace, esta aplicación solo le dará la opción de sonido o silencio.
+        \n\nPara obtener más información, consulte esta <a href="https://sites.google.com/view/sonidoyvibracin-before-api26/home">página web</a>.
+    </string>
+
+    <!-- DialogSorting -->
+    <string name="dialog_sorting_title">Elija qué Ordenar\n"    "(elige uno)</string>
+    <string name="dialog_sorting_snr">Intensidad de Señal</string>
+    <string name="dialog_sorting_freq">Frecuencia</string>
+    <string name="dialog_sorting_distance">Distancia</string>
+    <string name="dialog_sorting_azimuth">Dirección (Acimut)</string>
+    <string name="dialog_sorting_toast">Ordenar por</string>
+    <string name="dialog_sorting_help">Cada ráfaga de estaciones se puede ordenar en uno de estos cuatro parámetros.
+        \n\n<b><i>Intensidad de Señal</i></b> - (SNR) ordenado de la señal más fuerte a la más débil.
+        \n\n<b><i>Frecuencia</i></b> - ordenados a través de la banda de paso de audio, de menor a mayor.
+        \n\n<b><i>Distancia</i></b> - ordenados desde el más cercano a la mayor distancia.
+        \n\n<b><i>Dirección (Acimut).</i></b> - ordenados de 0 grados a 359 grados.
+        \n\nOrdenando por distancia y acimut se realiza según el cuadrado de la cuadrícula de la estación.  Las estaciones que no han proporcionado un cuadrado de cuadrícula se enumerarán primero.
+    </string>
+    <string name="dialog_sorting_toast_off">Ordenar ahora está apagado</string>
+    <string name="dialog_sorting_dont_text">\nWSJT-X realizará tres pases para decodificar cada ráfaga FT8/FT4.
+        \n\nLa pantalla de la aplicación se actualizará después de cada pase. La mayoría de las estaciones aparecerán en la primera actualización.
+        \n\nTenga en cuenta <b><i>que cada actualización se ordenará por separado</i></b>.
+    </string>
+
+    <string name="activity_maps_title">Estaciones más recientes</string>
+    <string name="activity_maps_error1">Esta pantalla dibujará líneas desde su cuadrícula a la cuadrícula de las estaciones escuchadas más recientemente.
+        \n\n<b>Sin embargo, su cuadrícula es desconocida.</b>
+        \n\nO WSJT-X aún no ha enviado su cuadrícula o no está configurado en la configuración de WSJT-X.</string>
+    <string name="activity_maps_error2">Actualmente no hay estaciones recibidas que hayan enviado sus cuadros de cuadrícula (grid squares).</string>
+    <string name="activity_maps_error_title">Error de Mapeo</string>
+    <string name="activity_maps_help_title">Trazado de Mapas</string>
+    <string name="activity_maps_help">Esta pantalla dibuja una línea desde su cuadrícula (grid square) a la cuadrícula de las últimas 30 estaciones recibidas.
+        \n\nSolo se asignan las estaciones que informan un cuadrado de cuadrícula.
+        \n\nLa aplicación continúa recopilando datos mientras esta pantalla está activa.
+        \n\n<b>Google Maps</b> no dibujará toda la tierra. Por lo tanto, puede ser necesario desplazarse por el mapa para ver todo.
+        \n\n<b>Filtros</b>: si filtra las estaciones, no se maparan. Sin embargo, cuando active los filtros, las estaciones ya mapadas
+        no se eliminarán hasta que ya no se encuentren entre las últimas 30 estaciones.
+    </string>
+
+    <string name="no_gmaps_title">Google Maps No Encontrado</string>
+    <string name="no_gmaps_text">Google Maps debe estar instalado para que la mapeos funcione.
+        \n\nEste dispositivo Android informa que Google Maps no está instalado o instalado, sino que está deshabilitado.
+    </string>
+
+    <string name="reply_toast_off">Las respuestas automáticas están DESACTIVADAS</string>
+    <string name="reply_toast_on">Las respuestas automáticas están ACTIVADAS</string>
+
+    <string name="dialog_reply_title">Respuestas Automáticas a Alertas</string>
+    <string name="dialog_reply_text0">La aplicación puede configurar automáticamente WSJT-X para responder a una alerta.
+        Con esta función, todo lo que tiene que hacer es presionar el botón WSJT-X <b><i>Enable Tx</i></b>.
+    </string>
+    <string name="dialog_reply_text1">Para activar y desactivar esta función, presione el ícono Responder en la parte superior de la pantalla (ilustrado a la derecha).</string>
+    <string name="dialog_reply_text2">\n<b>IMPORTANTE</b>: debe configurar WSJT-X para recibir mensajes. De lo contrario, esta característica no funcionará.
+        Presione el botón <b><i>CONFIGURAR</i></b> a continuación para obtener instrucciones.
+        \n\nPara más información ver <a href="https://sites.google.com/view/wsjtx-responder/home">esta página web</a>.
+    </string>
+    <string name="dialog_reply_desc">A reply icon, just like an Email reply icon</string>
+
+    <string name="dialog_reply_pre_text0">Esta aplicación puede responder automáticamente a las alertas.</string>
+    <string name="dialog_reply_pre_text1">Mantenga presionado (más de un segundo) el ícono Respuesta en la parte superior de la pantalla (y se ilustra a la derecha) para obtener información e instrucciones de configuración.</string>
+    <string name="dialog_dont_show_message_again">No vuelva a mostrar este mensaje.</string>
+
+    <!-- Used by DialogSetupDetails as launched from DialogReplyHelp class -->
+    <string name="reply_title_text_step1">Configuración de Respuesta - Página 1 de 3</string>
+    <string name="reply_header_text_step1">Abra WSJT-X o JTDX.\nIr al menú File\nSeleccione Settings.\n\n (La imagen se desplaza arriba/abajo,\n" "izquierda/derecha)</string>
+    <string name="reply_title_text_step2">Configuración de Respuesta - Página 2 de 3</string>
+    <string name="reply_header_text_step2">En la ventana de Settings hay varias\n pestañas en la parte superior.\n Seleccione la pestaña Reporting.\n\n (La imagen se desplaza arriba/abajo,\n" "izquierda/derecha</string>
+    <string name="reply_title_text_step3">Configuración de Respuesta - Página 3 de 3</string>
+    <string name="reply_header_text_step3">Haga clic en la casilla de verificación\n"     "<b><i>Accept UDP requests</i></b></string>
+
+    <string name="dialog_ip_changed_title">ADVERTENCIA: Su dirección IP ha cambiado</string>
+    <string name="dialog_ip_changed_text">La antigua IP:"  "</string>
+    <string name="dialog_ip_changed_text2">\nLa nueva IP:"  "</string>
+    <string name="dialog_ip_changed_text3">\n\n<b><i>Debe decirle a WSJT-X la nueva dirección IP</i></b>.
+        \n\nPara obtener instrucciones de configuración paso a paso, haga clic en el botón Ayuda a continuación.
+        \n\nPara evitar esto, configure su enrutador WiFi para asignar siempre la misma IP a este dispositivo.
+        Consulte el manual de su enrutador WiFi.
+    </string>
+
+    <string name="dialog_both_apps_title">Nota Importante</string>
+    <string name="dialog_both_apps_text">Tiene instaladas las versiones gratuitas y de pago de esta aplicación (<i>Muchas gracias</i>).
+        \n\nTenga en cuenta <b><i>que no puede ejecutar ambos <u>al mismo tiempo</u></i></b> a menos que les dé valores de puerto diferentes.
+        \n\nPara más información <a href="https://sites.google.com/view/ambas-versiones/home">tocar aquí</a>.
+    </string>
+
+    <string name="dialog_set_rx_freq_title">Seleccionar Estación\n"    "(desplaza arriba/abajo)</string>
+    <string name="dialog_set_rx_freq_texta">Seleccione la estación a la que desea responder y la aplicación establecerá la frecuencia WSJT-X.
+        \n\nEl efecto es el mismo que hacer doble clic en la estación en el panel WSJT-X <b><i>Band Activity</i></b>.
+    </string>
+    <string name="dialog_set_rx_freq_textb">
+        \n\n<b>IMPORTANTE</b> - Debe configurar WSJT-X para recibir mensajes. Presione el botón <b><i>CONFIGURAR</i></b> a continuación para obtener instrucciones.
+        \n\nPara más detalles <a href="https://sites.google.com/view/ajuste-frecuencia-de-recepcin/home">tocar aquí</a>.
+    </string>
+    <string name="dialog_set_rx_freq_text0">Esta función mostrará las estaciones recibidas en la última ráfaga.\n\n</string>
+    <string name="dialog_set_rx_freq_text1">\n\n<b><i>Por favor, intente nuevamente después de haber recibido algunas estaciones.</i></b></string>
+    <string name="dialog_set_rx_freq_text2"><b><i>WSJT-X no recibió el comando.</i></b>
+        \n\nSi esto continúa, verifique la configuración de WSJT-X.
+    </string>
+    <string name="dialog_set_rx_freq_text3"><b><i>Actualmente estás en modo WSPR.</i></b>
+        \n\nEsta función no operara en modo WSPR.
+    </string>
+
+
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="eula_title">Acuerdo de Licencia de Usuario Final\n (Desplácese por el texto completo)</string>
+    <string name="eula_message">LEA ESTE DOCUMENTO DETENIDAMENTE ANTES DE UTILIZAR ESTE SOFTWARE. ESTA LICENCIA PROPORCIONA INFORMACIÓN IMPORTANTE RELATIVA A ESTE SOFTWARE, LE PROPORCIONA UNA LICENCIA PARA USAR ESTE SOFTWARE Y CONTIENE INFORMACIÓN DE GARANTÍA Y RESPONSABILIDAD. AL UTILIZAR ESTE SOFTWARE, ESTÁ ACEPTANDO ESTE SOFTWARE ** COMO ESTÁ ** Y ACEPTA ESTAR OBLIGADO POR LOS TÉRMINOS DE ESTE ACUERDO DE LICENCIA. EN NINGÚN CASO, EL AUTOR (S) SERÁ RESPONSABLE DE CUALQUIER DAÑO DERIVADO DEL USO DE ESTE SOFTWARE. SI NO DESEA ACEPTAR ESTOS TÉRMINOS, DESPUÉS DE DESINSTALAR ESTE SOFTWARE. ESTA ES SU RESPONSABILIDAD
+\n\n1. Términos de Licencia
+\nEsta licencia le permite utilizar este software en un solo dispositivo. Si desea utilizar este software en más de un dispositivo, debe licenciar otra copia de este software.
+\n\n2. Restricciones de uso
+\nNo debe realizar ni distribuir copias del Software ni transferirlo de un dispositivo a otro. No debe descompilar, aplicar ingeniería inversa, desensamblar, incluir en otro software, traducir el Software ni utilizar el Software para fines comerciales. No deberá modificar, alterar, cambiar ni realizar ninguna otra modificación al Software ni crear trabajos derivados basados ​​en el Software. No debe alquilar, arrendar, revender, sub-licenciar, asignar, distribuir o transferir el Software o esta licencia. Cualquier intento de hacerlo será nulo y sin efecto.
+\n\n3. Propiedad
+\nEsta licencia le proporciona derechos limitados para utilizar el Software. El (los) autor (es) conservan toda la propiedad, derecho, título e interés en, hacia y del Software y todas las copias del mismo. Todos los derechos no otorgados específicamente en esta licencia, incluidos los derechos de autor nacionales e internacionales, están reservados por el Propietario.
+\n\n4. Marcas propietarias
+\nLos logotipos del propietario, los nombres de los productos, los manuales, la documentación y otros materiales de soporte constituyen secretos comerciales valiosos (ya sea que una parte de ellos pueda tener derechos de autor o estar patentados) o de otro modo son propiedad del Propietario. No debe eliminar ni ocultar los derechos de autor, marcas comerciales u otros avisos de propiedad del Propietario de ninguno de los materiales contenidos en este paquete o descargados junto con el Software.
+\n\n5. Renuncia de Garantías y Soporte Técnico
+\nEl Software se le proporciona después de pagar una licencia (si corresponde) y "TAL CUAL", sin ningún tipo de soporte técnico o garantía de ningún tipo, incluyendo, sin limitación, cualquier garantía o condición de comerciabilidad, idoneidad para un fin particular y No infracción.
+\n\n6. Responsabilidad durante el uso.
+\nUsted acepta utilizar siempre este software de manera segura. Usted acepta mantener al propietario, las subsidiarias, las filiales, los funcionarios, los agentes, los representantes, los empleados, los socios y los otorgantes de licencias libres de cualquier responsabilidad que esté relacionada de alguna manera con sus actividades. También promete no demandar al propietario, subsidiarias, afiliadas, oficiales, agentes, representantes, empleados, socios y otorgantes de licencias por reclamos, acciones, lesiones, daños o pérdidas asociadas con sus actividades.
+\n\nAdemás, acepta no responsabilizar al propietario, a las subsidiarias, a las filiales, a los funcionarios, a los agentes, a los representantes, a los empleados, a los socios y a los licenciantes responsables de los aranceles o multas que resulten del uso de esta aplicación.
+\n\nALGUNAS JURISDICCIONES NO PERMITEN LA EXCLUSIÓN DE GARANTÍAS IMPLÍCITAS, POR LO QUE LA EXCLUSIÓN ANTERIOR PUEDE NO APLICARSE A USTED. TAMBIÉN PUEDE TENER OTROS DERECHOS LEGALES QUE VARÍAN DE LA JURISDICCIÓN A LA JURISDICCIÓN.
+\n\nEl enlace a la Política de privacidad de Feotec:\n"      "<a href="https://sites.google.com/view/polticadeprivacidaddefeotec/home">Política de privacidad de Feotec</a>
+\nLa Política de privacidad describe la recopilación anónima de datos de uso. Para deshabilitar la recopilación anónima de datos de uso, presione el botón OPT-OUT a continuación. Para volver a habilitar, presione OPT-IN.
+    </string>
+    <string name="opt_out">Opt-Out</string>
+    <string name="opt_in">Opt-In</string>
+    <string name="opt_out_message">La recopilación anónima de datos de uso está DESACTIVADA.</string>
+    <string name="opt_in_message">La recopilación anónima de datos de uso está HABILITADA.</string>
+
+</resources>

@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- In Spanish the words for Cancel, Back, and Next don't all fit with textSize set to 16sp.  That's the reason for this file.
+    -->
+    <style name="AllButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/button_colors</item>
+        <item name="android:textStyle">bold|italic</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+</resources>
