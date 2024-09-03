@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    -->
+
+    <!-- Used only for writing log data to file and then only in debug version
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> -->
+
+    <!--
+        Android 11 package visibility changes require that apps specify which
+        set of other packages on the device that they can access. Since this
+        sample uses Google Maps, specifying the Google Maps package name is
+        required so that the buttons on the Map toolbar launch the Google Maps
+        app.
+    -->
+    <queries>
+        <package android:name="com.google.android.apps.maps" />
+    </queries>
+
+    <application>
+
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/.
+        -->
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+        <!--
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/activity_maps_title"
+            android:theme="@style/AppMapTheme"
+            android:parentActivityName=".MainActivity"
+            >
+        </activity>
+        -->
+
+    </application>
+
+</manifest>

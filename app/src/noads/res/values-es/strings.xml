@@ -1,0 +1,21 @@
+<resources>
+    <string name="new_features_text">Reconstruido para aprovechar las funciones de seguridad de Android 14
+    </string>
+    <string name="about_notes">Al utilizar esta aplicación, usted acepta los términos y condiciones especificados en el Acuerdo de Licencia de Usuario Final (ALUF).
+                        \n\nComentarios a <a href="mailto:feedback@feotec.com?subject=WSJT-X Monitor Feedback">feedback@feotec.com</a>
+                        \n\nPara la Política de Privacidad de Feotec" "<a href="https://sites.google.com/view/polticadeprivacidaddefeotec/home">haga clic aquí</a>.
+                        \n</string>
+    <!--
+    <string name="new_features_text">WSJT-X Monitor ahora es de código abierto, sujeto a la licencia GNU GPLv3.
+                        \n\n"<a href="https://github.com/Feotec/WSJTXMonitor">github.com/Feotec/WSJTXMonitor</a>
+                        \n\n¡Disfrutar!
+    </string>
+    <string name="about_notes">Al utilizar esta aplicación, usted acepta los términos y condiciones especificados en el Acuerdo de Licencia de Usuario Final (ALUF).
+                        \n\nCódigo fuente "<a href="https://github.com/Feotec/WSJTXMonitor">github.com/Feotec/WSJTXMonitor</a>
+                        \n\nComentarios a <a href="mailto:feedback@feotec.com?subject=WSJT-X Monitor Feedback">feedback@feotec.com</a>
+                        \n\nPara la Política de Privacidad de Feotec" "<a href="https://sites.google.com/view/polticadeprivacidaddefeotec/home">haga clic aquí</a>.
+                        \n</string>
+                    -->
+
+    <string name="opposite_app_name">com.feotec.wsjt_xmonitor.ads</string>
+</resources>
