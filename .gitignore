@@ -1,0 +1,18 @@
+*.iml
+.gradle
+# AndroidStudio only removed a few files from .idea/ directory but I removed it all.
+.idea
+/local.properties
+# The next three entries were placed there by AndroidStudio and do not exist.
+.DS_Store               
+/captures               
+.externalNativeBuild    
+/archive
+/utilities
+/Support
+/signingConfigs.properties
+/app/src/debug/res/values/google_maps_api.xml
+/app/src/release/res/values/google_maps_api.xml
+*.aab
+*.apk
+/Google Play URLs.txt
