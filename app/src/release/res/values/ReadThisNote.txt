@@ -1,4 +1,0 @@
-This if a placeholder because Git doesn't like empty directories.
-This directory should contain google_maps_api.xml, containing your Google
-Maps API key.
-
