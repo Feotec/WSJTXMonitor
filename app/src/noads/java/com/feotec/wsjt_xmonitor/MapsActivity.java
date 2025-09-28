@@ -128,19 +128,19 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == R.id.action_help) {
-            logInfo("onOptionsItemSelected() help *****");
-            FragmentManager fragMan = getSupportFragmentManager();
-            DialogFragment testFrag = (DialogFragment) fragMan.findFragmentByTag("Mapping Help Fragment");
-            if (testFrag == null) {
-                testFrag = new MappingHelpFragment();
-                testFrag.show(getSupportFragmentManager(), "Mapping Help Fragment");
-                testFrag.setCancelable(false);
-            }
-            return true;
+                logInfo("onOptionsItemSelected() help *****");
+                FragmentManager fragMan = getSupportFragmentManager();
+                DialogFragment testFrag = (DialogFragment) fragMan.findFragmentByTag("Mapping Help Fragment");
+                if (testFrag == null) {
+                    testFrag = new MappingHelpFragment();
+                    testFrag.show(getSupportFragmentManager(), "Mapping Help Fragment");
+                    testFrag.setCancelable(false);
+                }
+                return true;
         }
-        logInfo("onOptionsItemSelected() default *****");
-        return super.onOptionsItemSelected(item);
-    }
+                logInfo("onOptionsItemSelected() default *****");
+                return super.onOptionsItemSelected(item);
+        }
 
     //  This grid should be a six digit grid square.  The returnValue contains the latitude and longitude of that grid location.  In this case north latitude and east
     //      longitude are positive.
