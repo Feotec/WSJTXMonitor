@@ -183,7 +183,7 @@ public class DebugUtils {
 
         //  Get expiration date - IMPORTANT - the month begins with 0, Jan == 0, Feb == 1, etc.
         Calendar expirationCalendar = Calendar.getInstance(Locale.ENGLISH);
-        expirationCalendar.set(2024,11,25,21,15,0);
+        expirationCalendar.set(2025,11,25,21,15,0);
         Date expirationDate = expirationCalendar.getTime();
         String expirationTimeString = expirationDate.toString();
 
