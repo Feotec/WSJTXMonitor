@@ -1,5 +1,5 @@
 <resources>
-    <string name="new_features_text">Rebuilt to take advantage of Android 14 security features
+    <string name="new_features_text">Rebuilt to take advantage of Android 15 and 16 security features
     </string>
     <string name="new_features_text2">" "</string>  <!-- to satsify linker as long as dialog_new_features.xml exists.  -->
     <string name="about_notes">By using this application you agree to the terms and conditions specified in the End-User-License-Agreement (EULA).
