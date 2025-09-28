@@ -1,6 +1,8 @@
 /build
+#  The only thing in the ads/ and noads/ directories are the .aab files
 /ads
 /noads
 /src/test/
 /src/androidTest/
 /libs
+/src/main/assets/
