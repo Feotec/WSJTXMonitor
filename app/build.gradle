@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 
 // Load keystore
-def keystorePropertiesFile = rootProject.file("signingConfigs.properties");
+def keystorePropertiesFile = rootProject.file("signingConfigs.properties")
 def keystoreProperties = new Properties()
 keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
@@ -17,11 +17,11 @@ android {
     //compileSdkVersion 33      beginning with SDK 33 use compileSdk (instead of compileSdkVersion) and place it in the defaultConfig block
     defaultConfig {
         applicationId "com.feotec.wsjt_xmonitor"
-        compileSdk 34
+        compileSdk 36
         minSdkVersion 21
-        targetSdkVersion 34
-        versionCode 64
-        versionName "2.102"
+        targetSdkVersion 36
+        versionCode 66
+        versionName "2.104"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         resValue  'bool', 'multicastIP', 'false'         //  To enable/disable MUST MANUALLY add/remove permissions CHANGE_WIFI_STATE and CHANGE_WIFI_MULTICAST_STATE
                                                         //  from manifest.xml.  And, obviously, change this constant to false.
@@ -64,14 +64,14 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    noadsImplementation 'com.google.android.gms:play-services-maps:19.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
+    noadsImplementation 'com.google.android.gms:play-services-maps:19.2.0'
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test:runner:1.6.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
-    implementation 'androidx.appcompat:appcompat:1.7.0'
+    androidTestImplementation 'androidx.test:runner:1.7.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.7.0'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation "androidx.preference:preference:1.2.1"
-    androidTestImplementation 'androidx.test:rules:1.6.1'
-    implementation 'androidx.work:work-runtime-ktx:2.9.1'       //  got PendingIntent.FLAG_IMMUTABLE error even though added the flag (UDPService.getNotification().  This seems to have fixed it on Android 12 API 31
+    androidTestImplementation 'androidx.test:rules:1.7.0'
+    implementation 'androidx.work:work-runtime-ktx:2.10.4'       //  got PendingIntent.FLAG_IMMUTABLE error even though added the flag (UDPService.getNotification().  This seems to have fixed it on Android 12 API 31
 }
