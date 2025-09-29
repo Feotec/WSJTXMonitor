@@ -1,7 +1,19 @@
+<!--     
+ Copyright (C) 2019-2025 Feotec Thomas Reynolds
+ 
+ This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as 
+ published by the Free Software Foundation GNU APGLv3 or later version.
+ 
+ This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+ A copy of GNU APGLv3, the GNU General Public license is in a file named COPYING located in the root directory.  
+ -->
 <resources>
 <!--
-    This if a placeholder because Git doesn't like empty directories.
+    This is a placeholder because Git doesn't like empty directories.
     This directory should contain google_maps_api.xml, containing your 
-    Google Maps API key.
+    Google Maps API key.  The key is only necessary for "noads" build 
+    variants.
 -->
 </resources>
