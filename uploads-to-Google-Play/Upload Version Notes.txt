@@ -1009,3 +1009,9 @@ NOTE - on 12/16/2019 I removed the aab files except for 1.81.  I did this just t
       Code is archived as 09-24-2025-2200_WSJTXMonitor.tgz.
     This is a production release, identical to v2.103.  The purpose was to update to Android 15 and 16, SDK version 36.  Only changed versionName and versionCode.
 
+2.201-noads-09-30-2025-1230, 2.201-ads-09-30-2025-1230 - versionName "2.201", versionCode 67.  Release name 2.201-noads-09-30-2025-1230, 2.201-ads-09-30-2025-1230.
+      Code is archived as 09-30-2025-1230_WSJTXMonitor.tgz.
+    This is a release to internal test, both free and paid.  The purpose was to announce that the app is open source and provide a GitHub link.  
+  src\ads\res\values\strings.xml, src\ads\res\values-es\strings.xml, app\src\noads\res\values\strings.xml, app\src\noads\res\values-es\strings.xml
+    - Changed What's new and About message.
+
