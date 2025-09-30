@@ -52,7 +52,7 @@ android {
         debug {
             debuggable true
             applicationIdSuffix ".debug"
-            buildString = 'Debug'     //  remove when building release, restore while debugging.
+            //buildString = 'Debug'     //  remove when building release, restore while debugging.
         }
     }
     flavorDimensions 'basic'
