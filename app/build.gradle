@@ -36,8 +36,8 @@ android {
         compileSdk 36
         minSdkVersion 21
         targetSdkVersion 36
-        versionCode 67
-        versionName "2.201"
+        versionCode 68
+        versionName "2.202"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         resValue  'bool', 'multicastIP', 'false'         //  To enable/disable MUST MANUALLY add/remove permissions CHANGE_WIFI_STATE and CHANGE_WIFI_MULTICAST_STATE
                                                         //  from manifest.xml.  And, obviously, change this constant to false.
