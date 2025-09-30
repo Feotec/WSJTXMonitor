@@ -43,7 +43,7 @@ You can build without these but you'll have to perform some minor surgury to app
     def keystoreProperties = new Properties()
     keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
-Then, just below that in the signingConfigs bracket modify it to look like this: 
+Then, just below that you'll see the signingConfigs bracket: 
     signingConfigs {
         wsjtx_monitor_signing {
             keyAlias keystoreProperties['keyAlias']
