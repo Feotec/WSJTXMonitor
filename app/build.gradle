@@ -36,8 +36,8 @@ android {
         compileSdk 36
         minSdkVersion 21
         targetSdkVersion 36
-        versionCode 66
-        versionName "2.104"
+        versionCode 67
+        versionName "2.201"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         resValue  'bool', 'multicastIP', 'false'         //  To enable/disable MUST MANUALLY add/remove permissions CHANGE_WIFI_STATE and CHANGE_WIFI_MULTICAST_STATE
                                                         //  from manifest.xml.  And, obviously, change this constant to false.
@@ -52,7 +52,7 @@ android {
         debug {
             debuggable true
             applicationIdSuffix ".debug"
-            //buildString = 'Debug'     //  remove when building release, restore while debugging.
+            buildString = 'Debug'     //  remove when building release, restore while debugging.
         }
     }
     flavorDimensions 'basic'
@@ -89,5 +89,5 @@ dependencies {
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     implementation "androidx.preference:preference:1.2.1"
     androidTestImplementation 'androidx.test:rules:1.7.0'
-    implementation 'androidx.work:work-runtime-ktx:2.10.4'       //  got PendingIntent.FLAG_IMMUTABLE error even though added the flag (UDPService.getNotification().  This seems to have fixed it on Android 12 API 31
+    implementation 'androidx.work:work-runtime-ktx:2.10.5'       //  got PendingIntent.FLAG_IMMUTABLE error even though added the flag (UDPService.getNotification().  This seems to have fixed it on Android 12 API 31
 }
