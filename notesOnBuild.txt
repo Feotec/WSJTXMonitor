@@ -1,16 +1,24 @@
 Background 
 
-The app has two "flavors" - ads and noads.  For each flavor there are two "build types" - release and debug.  So there will be four build variants 1) adsdebug (default), 2) adsrelease, 3) noadsdebug, and 4) noadsrelease.
+The app has two "flavors" - ads and noads.  For each flavor there are two "build types" - release and debug.  So there will be four build variants 
+  1) adsdebug (default), 
+  2) adsrelease, 
+  3) noadsdebug, and 
+  4) noadsrelease.
 
 The adsrelease is what is published on Google Play as the WSJT-X Monitor app (free).
 The noadsrelease is what is published as WSJT-X Monitor Pro (US$1.99).
 
-The only difference between ads and noads is the addition of the mapping feature on the noads version.  (The "ads" business is left over from the very beginnings.  Neither app has ever had ads).  WSJT-X Monitor Pro (noads) was created mainly as a way for users to say "buy yourself a cup of coffee" (Thanks to all Pro users).
+The only difference between ads and noads is the addition of the mapping feature on the noads version.  (The "ads" business is left over from the very 
+beginnings.  Neither app has ever had ads).  WSJT-X Monitor Pro (noads) was created mainly as a way for users to say "buy yourself a cup of coffee" 
+(Thanks to all Pro users).
 
+---
 
 Building - Google Maps API
 
-In a public repository such as this, Google will not allow API keys.  So, in order to include the mapping feature you'll have to provide your own (free) Google Maps API key.  Again, this feature is only in the noads build.  You do not need the Maps API key to build the ads version.  
+In a public repository such as this, Google will not allow API keys.  So, in order to include the mapping feature you'll have to provide your own (free) 
+Google Maps API key.  Again, this feature is only in the noads build.  You do not need the Maps API key to build the ads version.  
 
 The Google Maps API key reside at
     app/src/debug/res/values/google_maps_api.xml
@@ -18,10 +26,13 @@ for release builds and
     app/src/release/res/values/google_maps_api.xml
 for debug builds.  For more info see https://developers.google.com/maps/documentation/android/signup.
 
+---
 
 Building - app/build.gradle
 
-Another thing missing from a public repository is signing information.  These are defined in build.gradle located in the app/ directory.  The signing information is loaded from a file, signingConfigs.properties.  Obviously this is not included in the repository.  If you have your own and wish to use them the format of signingConfigs.properties is
+Another thing missing from a public repository is signing information.  These are defined in build.gradle located in the app/ directory.  The signing 
+information is loaded from a file, signingConfigs.properties.  Since it includes passwords this cannot be included in the repository.  If you have your 
+own and wish to use them the format of signingConfigs.properties is
     keyAlias=The name of your key
     keyPassword=yourKeyPassword
     storeFile=../../Location of JKS file
@@ -32,13 +43,24 @@ You can build without these but you'll have to perform some minor surgury to app
     def keystoreProperties = new Properties()
     keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
-Then, just below that in the signingConfigs bracket modify it to look like this:
+Then, just below that in the signingConfigs bracket modify it to look like this: 
     signingConfigs {
         wsjtx_monitor_signing {
-            keyAlias 'The key' 
-            keyPassword 'keypasswordx'  
-            //storeFile file(keystoreProperties['storeFile'])
-            //storePassword keystoreProperties['storePassword']
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile file(keystoreProperties['storeFile'])
+            storePassword keystoreProperties['storePassword']
         }
     }
-To be clear 'The key' and 'keypasswordx' can be any string you choose.
+Simply comment out or delete the signingConfigs bracket.
+
+Further down in the same app/build.gradle file you'll see a block that looks like this:
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.wsjtx_monitor_signing
+        }
+Here you need to comment out or remove the line beginning with "signingConfig".
+
+With these two changes you can build the debug and release versions. (Note there's no functional difference between debug and release).
