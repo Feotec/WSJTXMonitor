@@ -10,27 +10,29 @@
  A copy of GNU APGLv3, the GNU General Public license is in a file named COPYING located in the root directory.  
  -->
 <resources>
+    <!--
     <string name="new_features_text">Rebuilt to take advantage of Android 15 and 16 security features
     </string>
-    <string name="new_features_text2">" "</string>  <!-- to satsify linker as long as dialog_new_features.xml exists.  -->
+    <string name="new_features_text2">" "</string>
     <string name="about_notes">By using this application you agree to the terms and conditions specified in the End-User-License-Agreement (EULA).
                         \n\nFeedback to <a href="mailto:feedback@feotec.com?subject=WSJT-X Monitor Feedback">feedback@feotec.com</a>
                         \n\nFor Feotec Privacy Policy" "<a href="https://sites.google.com/view/feotec-privacy/home">click here</a>
                         \n\nA paid version with more features is available.  <a href="https://play.google.com/store/apps/details?id=com.feotec.wsjt_xmonitor.noads">Click here for details.</a>
                         \n</string>
-    <!--
+                    -->
+
     <string name="new_features_text">WSJT-X Monitor is now open source, subject to GNU APGLv3 license.
                         \n\n"<a href="https://github.com/Feotec/WSJTXMonitor">github.com/Feotec/WSJTXMonitor</a>
                         \n\nEnjoy!
     </string>
-    <string name="new_features_text2">" "</string>
+    <string name="new_features_text2">" "</string>   <!-- to satsify linker as long as dialog_new_features.xml exists.  -->
     <string name="about_notes">By using this application you agree to the terms and conditions specified in the End-User-License-Agreement (EULA).
                         \n\nSouce code "<a href="https://github.com/Feotec/WSJTXMonitor">github.com/Feotec/WSJTXMonitor</a>
                         \n\nFeedback to <a href="mailto:feedback@feotec.com?subject=WSJT-X Monitor Feedback">feedback@feotec.com</a>
                         \n\nFor Feotec Privacy Policy" "<a href="https://sites.google.com/view/feotec-privacy/home">click here</a>
                         \n\nA paid version with more features is available.  <a href="https://play.google.com/store/apps/details?id=com.feotec.wsjt_xmonitor.noads">Click here for details.</a>
                         \n</string>
-                    -->
+
 
     <string name="opposite_app_name">com.feotec.wsjt_xmonitor.noads</string>
     <string name="activity_maps_no_maps">This display draws a line from your grid square to the grid square of the last 30 stations received.
